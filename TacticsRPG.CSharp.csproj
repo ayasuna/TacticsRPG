@@ -69,8 +69,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Common\CameraRig.cs" />
+    <Compile Include="Assets\Scripts\Common\State Machine\State.cs" />
+    <Compile Include="Assets\Scripts\Common\State Machine\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\Controller\Battle States\BattleState.cs" />
+    <Compile Include="Assets\Scripts\Controller\Battle States\InitBattleState.cs" />
+    <Compile Include="Assets\Scripts\Controller\Battle States\MoveTargetState.cs" />
+    <Compile Include="Assets\Scripts\Controller\BattleController.cs" />
     <Compile Include="Assets\Scripts\Controller\InputController.cs" />
     <Compile Include="Assets\Scripts\EventArgs\InfoEventArgs.cs" />
+    <Compile Include="Assets\Scripts\Model View Component\Board.cs" />
     <Compile Include="Assets\Scripts\Model View Component\Tile.cs" />
     <Compile Include="Assets\Scripts\Model\LevelData.cs" />
     <Compile Include="Assets\Scripts\Model\Point.cs" />
