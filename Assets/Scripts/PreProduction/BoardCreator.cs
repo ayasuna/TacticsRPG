@@ -85,7 +85,7 @@ public class BoardCreator : MonoBehaviour
         {
             for (int x = (int)rect.xMin; x < (int)rect.xMax; x++)
             {
-                Point p = new global::Point(x, y);
+                Point p = new Point(x, y);
                 GrowSingle(p);
             }
         }
@@ -97,7 +97,7 @@ public class BoardCreator : MonoBehaviour
         {
             for (int x = (int)rect.xMin; x < (int)rect.xMax; x++)
             {
-                Point p = new global::Point(x, y);
+                Point p = new Point(x, y);
                 ShrinkSingle(p);
             }
         }
