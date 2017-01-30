@@ -191,7 +191,7 @@ public class BoardCreator : MonoBehaviour
     //Save the created level
     public void Save()
     {
-        string filePath = Application.dataPath + "Resources/Levels";
+        string filePath = Application.dataPath + "/Resources/Levels";
         if (!Directory.Exists(filePath))
         {
             CreateSaveDirectory();
@@ -204,7 +204,7 @@ public class BoardCreator : MonoBehaviour
             board.tiles.Add(new Vector3(t.pos.x, t.pos.y, t.height));
         }
 
-        string fileName = string.Format("{1}.asset", filePath, name);
+        string fileName = string.Format("Assets/Resources/Levels/{1}.asset", filePath, name);
         AssetDatabase.CreateAsset(board, fileName);
     }
 
