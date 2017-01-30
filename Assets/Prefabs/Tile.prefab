@@ -16,13 +16,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 4
   m_Component:
-  - component: {fileID: 4732932784286984}
-  - component: {fileID: 33976315268235636}
-  - component: {fileID: 65152352311470114}
-  - component: {fileID: 23432421875731724}
-  - component: {fileID: 114294133301873124}
+  - 4: {fileID: 4732932784286984}
+  - 33: {fileID: 33976315268235636}
+  - 65: {fileID: 65152352311470114}
+  - 23: {fileID: 23432421875731724}
+  - 114: {fileID: 114294133301873124}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -39,10 +39,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23432421875731724
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -57,9 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 347663588053b7a4d8fc3fd7296db805, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -67,7 +65,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -107,5 +105,4 @@ MonoBehaviour:
   pos:
     x: 0
     y: 0
-    z: 0
   height: 0
