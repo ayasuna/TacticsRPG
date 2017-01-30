@@ -203,13 +203,13 @@ public class BoardCreator : MonoBehaviour
             board.tiles.Add(new Vector3(t.pos.x, t.pos.y, t.height));
         }
 
-        string fileName = string.Format("{1}.asset", filePath, name);
+        string fileName = string.Format("Assets/Resources/Levels/{1}.asset", filePath, name);
         AssetDatabase.CreateAsset(board, fileName);
     }
 
     void CreateSaveDirectory()
     {
-        string filePath = Application.dataPath + "Resources";
+        string filePath = Application.dataPath + "/Resources";
         if (!Directory.Exists(filePath))
         {
             AssetDatabase.CreateFolder("Assets", "Resources");
