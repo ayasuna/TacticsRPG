@@ -39,6 +39,7 @@ public abstract class BattleState : State
         }
         pos = p;
         tileSelectionIndicator.localPosition = board.tiles[p].center;
+        Debug.Log("Tile: " + board.tiles[p].center);
     }
 
     //Event handlers for input events. Virtual with empty bodo so concrete subclasses not required to override.
@@ -49,16 +50,6 @@ public abstract class BattleState : State
 
     protected virtual void OnFire(object sender, InfoEventArgs<int> e)
     {
-
+        Debug.Log(tileSelectionIndicator.localPosition.x + " " + tileSelectionIndicator.localPosition.y + " " + tileSelectionIndicator.localPosition.z);
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

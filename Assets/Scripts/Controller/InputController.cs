@@ -93,9 +93,4 @@ class Repeater
 
         return retValue;
     }
-    // Use this for initialization
-    void Start()
-    {
-
-    }
 }

@@ -20,13 +20,4 @@ public class InitBattleState : BattleState
         yield return null;
         owner.ChangeState<MoveTargetState>();
     }
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
