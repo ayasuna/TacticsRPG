@@ -13,7 +13,17 @@ public class Tile : MonoBehaviour
     public int height;
 
     //Convenience property to place objects centre of top of tile surface
-    public Vector3 center { get { return new Vector3(pos.x, height * stepHeight, pos.y); } } 
+    public Vector3 center { get { return new Vector3(pos.x, height * stepHeight, pos.y); } }
+
+    //GameObject that Tile holds
+    public GameObject content;
+
+    //Tag stops public field from appearing in inspector.
+    //prev stores previous tile. Can loop back through tiles to see entire path taken until "null" reached.
+    [HideInInspector] public Tile prev;
+
+    //keep count of nubmer of tiles traversed to get distance.
+    [HideInInspector] public int distance;
 
     //Visually reflect new values of position or height when modified
     void Match()
