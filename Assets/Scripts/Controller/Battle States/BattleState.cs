@@ -12,6 +12,10 @@ public abstract class BattleState : State
     public Transform tileSelectionIndicator { get { return owner.tileSelectionIndicator; } }
     public Point pos { get { return owner.pos;  } set { owner.pos = value; } }
 
+    public AbilityMenuPanelController abilityMenuPanelController { get { return owner.abilityMenuPanelController; } }
+    public Turn turn { get { return owner.turn; } }
+    public List<Unit> units { get { return owner.units; } }
+
     protected virtual void Awake()
     {
         owner = GetComponent<BattleController>();   //Connect reference to BattleController
