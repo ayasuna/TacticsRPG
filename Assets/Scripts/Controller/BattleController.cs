@@ -17,6 +17,8 @@ public class BattleController : StateMachine
     public Turn turn = new Turn();
     public List<Unit> units = new List<Unit>();
 
+    public StatPanelController statPanelController;
+
 
     void Start()
     {
