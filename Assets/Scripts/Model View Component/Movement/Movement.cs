@@ -6,8 +6,9 @@ using UnityEngine;
 //Base class for all types of movement
 public abstract class Movement : MonoBehaviour
 {
-    public int range;
-    public int jumpHeight;
+    public int range { get { return stats[StatTypes.MOV]; } }
+    public int jumpHeight { get { return stats[StatTypes.JMP]; } }
+    protected Stats stats;
     protected Unit unit;
     protected Transform jumper;
 
@@ -15,6 +16,11 @@ public abstract class Movement : MonoBehaviour
     {
         unit = GetComponent<Unit>();
         jumper = transform.FindChild("Jumper");
+    }
+
+    protected virtual void Start()
+    {
+        stats = GetComponent<Stats>();
     }
 
     public virtual List<Tile> GetTilesInRange(Board board)

@@ -11,6 +11,8 @@ public class Stats : MonoBehaviour
     }
     int[] _data = new int[(int)StatTypes.Count];
 
+    
+
     public static string WillChangeNotification(StatTypes type)
     {
         if (!_willChangeNotifications.ContainsKey(type))
