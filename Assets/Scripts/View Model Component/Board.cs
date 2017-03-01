@@ -22,15 +22,27 @@ public class Board : MonoBehaviour {
     public Color selectedTileColor = new Color(0, 1, 1, 1);
     public Color defaultTileColor = new Color(1, 1, 1, 1);
 
+    public Point min { get { return _min; } }
+    public Point max { get { return _max; } }
+    Point _min;
+    Point _max;
+
     public void Load(LevelData data)
     {
-        //Use reference of a Tile prefab to instantiate all tiles
-        for (int i=0; i<data.tiles.Count; i++)
+        _min = new Point(int.MaxValue, int.MaxValue);
+        _max = new Point(int.MinValue, int.MinValue);
+
+        for (int i = 0; i < data.tiles.Count; ++i)
         {
             GameObject instance = Instantiate(tilePrefab) as GameObject;
             Tile t = instance.GetComponent<Tile>();
-            t.Load(data.tiles[i]);  //save tiles to dictionary based on location
+            t.Load(data.tiles[i]);
             tiles.Add(t.pos, t);
+
+            _min.x = Mathf.Min(_min.x, t.pos.x);
+            _min.y = Mathf.Min(_min.y, t.pos.y);
+            _max.x = Mathf.Max(_max.x, t.pos.x);
+            _max.y = Mathf.Max(_max.y, t.pos.y);
         }
     }
 
@@ -40,7 +52,7 @@ public class Board : MonoBehaviour {
      * returns a bool indicating whether or not to allow the movement. 
      */
 
-	public List<Tile> Search(Tile start, Func<Tile, Tile, bool> addTile)
+    public List<Tile> Search(Tile start, Func<Tile, Tile, bool> addTile)
     {
         List<Tile> retValue = new List<Tile>();
         retValue.Add(start);
